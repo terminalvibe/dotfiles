@@ -7,6 +7,5 @@ alias ....='cd ../../..'
 alias cls='clear && printf "\e[3J"'
 
 # System monitoring
-alias h='htop'
 alias dfh='df -h'
 alias duh='du -sh *'
