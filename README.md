@@ -30,14 +30,23 @@ sudo dnf install -y git neovim nnn htop
 
 ### Install dotafiles
 
-To install simply execute in shell
+Back up the existing .bashrc file and install the .dotfiles repository by executing the following commands in your shell:
 
 ```bash
+# Backup .bashrc file
+cp ~/.bashrc ~/.bashrc.bak
+# Install .dotfiles
+git clone --bare https://github.com/terminalvibe/dotfiles.git $HOME/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfiles clone https://github.com/terminalvibe/dotfiles.git
+
+# Force overwrite existing files if they already exist.
+dotfiles checkout -f
+
+# When I run dotfile status , don’t show untracked files
+dotfiles config --local status.showUntrackedFiles no
 ```
 
-Manages dotfiles using a bare Git repository located at:
+Manage dotfiles using a bare Git repository located at:
 
 ```bash
 $HOME/.dotfiles
