@@ -2,6 +2,10 @@
 # Treats $HOME as the working tree, allowing version control of configuration files
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+##### ------------------------------------------------------------------
+##### NVIM & GENERAL ALIASES
+##### ------------------------------------------------------------------
+
 # Check Neovim installed in /opt directory
 if [ -x /opt/nvim-linux-x86_64/bin/nvim ]; then
   export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
@@ -14,15 +18,27 @@ if command -v nvim >/dev/null 2>&1; then
   alias vcl='nvim --clean'
 fi
 
+##### ------------------------------------------------------------------
+##### NNN & GENERAL ALIASES
+##### ------------------------------------------------------------------
+
 # Shortcut alias for launching nnn file manager
 if command -v nnn >/dev/null 2>&1; then
   alias n='nnn'
 fi
 
+##### ------------------------------------------------------------------
+##### HTOP & GENERAL ALIASES
+##### ------------------------------------------------------------------
+
 # System monitoring
 if command -v htop >/dev/null 2>&1; then
   alias h='htop'
 fi
+
+##### ------------------------------------------------------------------
+##### SSH & GENERAL ALIASES
+##### ------------------------------------------------------------------
 
 # Run ssh-agent
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
@@ -33,6 +49,10 @@ fi
 if command -v ssh >/dev/null 2>&1; then
   alias s='ssh'
 fi
+
+##### ------------------------------------------------------------------
+##### DOCKER & GENERAL ALIASES
+##### ------------------------------------------------------------------
 
 # Check docker installed and add aliases
 if command -v docker >/dev/null 2>&1; then
@@ -49,6 +69,10 @@ if command -v docker >/dev/null 2>&1; then
   # List local Docker images
   alias di='docker images'
 fi
+
+##### ------------------------------------------------------------------
+##### KUBERNETES & GENERAL ALIASES
+##### ------------------------------------------------------------------
 
 # Check Kubernetes installed and add aliases
 if command -v kubectl >/dev/null 2>&1; then
