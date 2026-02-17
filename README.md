@@ -13,19 +13,19 @@ Debian/Ubuntu
 
 ```bash
 sudo apt update
-sudo apt install -y git neovim nnn htop tmux
+sudo apt install -y git neovim nnn htop tmux fzf fd bat
 ```
 
 Arch
 
 ```bash
-sudo pacman -Syu git neovim nnn htop tmux
+sudo pacman -Syu git neovim nnn htop tmux fzf fd bat
 ```
 
 Fedora
 
 ```bash
-sudo dnf install -y git neovim nnn htop tmux
+sudo dnf install -y git neovim nnn htop tmux fzf fd bat
 ```
 
 ### Install dotafiles
