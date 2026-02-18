@@ -34,7 +34,7 @@ __fzf_insert_paths() {
       if [ -d {} ]; then
        tree -C {} | head -200
       else
-       bat --style=numbers --color=always {} 2>/dev/null || cat {}
+       bat -p {} 2>/dev/null || cat {}
       fi
     ')
 
