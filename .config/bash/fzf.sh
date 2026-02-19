@@ -9,21 +9,7 @@
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 
 # Global fzf UI configuration
-export FZF_DEFAULT_OPTS="
---height=40%                      # Popup height
---layout=reverse                  # Prompt at top, results below
---info=inline                     # Show match info inline
---border=rounded                  # Rounded border
---margin=1
---padding=1
---prompt='❯ '                     # Prompt symbol
---pointer='▶'                     # Selected item pointer
---marker='✓'                      # Multi-select marker
---cycle                           # Allow cyclic scrolling
---bind=ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down
---bind=ctrl-f:preview-page-down,ctrl-b:preview-page-up
---bind=alt-a:toggle-all           # Toggle select all
-"
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border=rounded --margin=1 --padding=1 --prompt='❯ ' --pointer='▶' --marker='✓' --cycle --bind=ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --bind=ctrl-f:preview-page-down,ctrl-b:preview-page-up --bind=alt-a:toggle-all"
 
 __fzf_insert_paths() {
   local -a items
